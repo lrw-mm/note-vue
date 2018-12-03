@@ -34,7 +34,7 @@ export default {
   methods: {
     get() {
       let that = this;
-      axios.get("http://localhost:3000/getContent").then(function(res) {
+      axios.get("http://lrw.hhp.im/getArticle").then(function(res) {
         console.log(res.data);
         that.contents = res.data;
         that.Informations = res.data.reverse();

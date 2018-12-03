@@ -65,7 +65,7 @@ export default {
         date: this.time,
         use: this.way
       };
-      axios.post("http://localhost:3000/content", showContent).then(function(res) {
+      axios.post("http://lrw.hhp.im/article", showContent).then(function(res) {
           console.log(res);
         });
       this.$router.push({'path':"/info"});

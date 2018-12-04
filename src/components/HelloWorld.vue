@@ -32,13 +32,13 @@ export default {
     };
   },
   methods: {
-    //getContent() {
-      //let that = this;
-      //axios.get("http://localhost:3000/getContent").then(function(res) {
-        //console.log(res);
-        //that.Informations = res.data.reverse();
-      //});
-    //},
+    getNote() {
+      let that = this;
+      axios.get("http://lrw.hhp.im/getNote").then(function(res) {
+        console.log(res);
+        that.Informations = res.data.reverse();
+      });
+    },
     handleClick: function() {
       alert("记一笔账吧~");
     },
@@ -65,7 +65,7 @@ export default {
         date: this.time,
         use: this.way
       };
-      axios.post("http://lrw.hhp.im/article", showContent).then(function(res) {
+      axios.post("http://lrw.hhp.im/note", showNote).then(function(res) {
           console.log(res);
         });
       this.$router.push({'path':"/info"});

@@ -60,7 +60,7 @@ export default {
         alert("请填写日期");
         return;
       }
-      var showContent = {
+      var showNote = {
         income: this.money,
         date: this.time,
         use: this.way
